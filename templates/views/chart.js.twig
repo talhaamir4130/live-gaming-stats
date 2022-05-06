@@ -1,0 +1,66 @@
+const data = {
+    labels: [
+        'Planning',
+        'Absence',
+        'Présence',
+        'Note de Frais',
+        'Document',
+        'Entretien',
+        'Evenement',
+        'Legacy',
+        'Securité',
+        'Ressources Humaines',
+        'Heure',
+        'Paramètre',
+    ],
+    datasets: [{
+        label: '',
+        data: [],
+        backgroundColor: [
+            'rgba(99, 119, 130, 1)',
+            'rgba(35, 198, 200, 1)',
+            'rgba(228, 158, 80, 1)',
+            'rgba(208, 77, 91, 1)',
+            'rgb(175,220,226)',
+            'rgba(108, 77, 91, 1)',
+            'rgb(18,52,84)',
+            'rgb(56,179,88)',
+            'rgb(219,183,188)',
+            'rgb(194,90,233)',
+            'rgb(212,110,63)',
+            'rgb(238,218,92)',
+        ]
+    }]
+};
+
+var chartCanvas = document.getElementById('chart');
+var chartCtx = chartCanvas.getContext('2d');
+
+var barChart = new Chart(chartCtx, {
+    type: 'bar',
+    data: [],
+    options: {
+        title: {
+            display: false
+        },
+        legend: {
+            display: false
+        },
+        scales:{
+            xAxes: [{
+                gridLines: {
+                    display:false
+                }
+            }],
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                },
+                scaleLabel: {
+                    display: true,
+                    labelString: 'some label'
+                }
+            }]
+        }
+    }
+});

@@ -10,7 +10,6 @@ class MainController extends AbstractController
 {
     public function chart(): Response
     {
-
         return $this->render('views/chart.html.twig', [
         ]);
     }

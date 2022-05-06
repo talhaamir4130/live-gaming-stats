@@ -1,6 +1,12 @@
 {% extends "base.html.twig" %}
 
-
 {% block body %}
-    This is body
+    <canvas id="chart"></canvas>
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <script>{% include "views/chart.js.twig" %}</script>
 {% endblock %}
